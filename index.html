@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Экскурсия: Борис Жуков | Культурно-эстетический центр</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .exhibition-info {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .info-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .info-icon {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: #8B4513;
+        }
+        
+        .info-item h3 {
+            color: #000;
+            margin-bottom: 0.5rem;
+        }
+        
+        .info-item p {
+            color: #000;
+        }
+        
+        .section {
+            padding: 3rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: #8B4513;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #8B4513;
+            margin: 10px auto;
+        }
+        
+        .bio {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .bio p {
+            text-align: justify;
+        }
+        
+        .highlight {
+            background-color: #f5e8d9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #8B4513;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 2rem;
+        }
+        
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            background-color: white;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .gallery-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .gallery-caption {
+            padding: 15px;
+            text-align: center;
+            font-style: italic;
+            color: #555;
+        }
+        
+        .center-info {
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .center-details {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .detail-item {
+            flex: 1;
+            min-width: 250px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .detail-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        footer {
+            background: #3a2c1c;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .exhibition-info {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">🎨</div>
+                <h1>Культурно-эстетический центр</h1>
+                <p>Экскурсия: Борис Петрович Жуков - учёный и конструктор</p>
+            </div>
+            
+            <div class="exhibition-info">
+                <div class="info-item">
+                    <div class="info-icon">⏱️</div>
+                    <div>
+                        <h3>Длительность</h3>
+                        <p>1 час</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">🎭</div>
+                    <div>
+                        <h3>Тема</h3>
+                        <p>Жизнь и научная деятельность</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">👥</div>
+                    <div>
+                        <h3>Группы</h3>
+                        <p>До 15 человек</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Биография Бориса Жукова</h2>
+            <div class="bio">
+                <p>Борис Петрович Жуков (1912-2000) — выдающийся советский учёный и конструктор, создатель высокоэффективных топлив, академик Академии наук СССР.</p>
+                
+                <p>Родился 12 ноября 1912 г. в Самарканде. В 1921 г. переехал с родителями в Москву, где окончил школу с химическим уклоном. В 1937 г. с отличием окончил Московский химико-технологический институт им. Д. И. Менделеева.</p>
+                
+                <div class="highlight">
+                    <p>Во время Великой Отечественной войны под руководством Б. П. Жукова были разработаны рецептуры порохов для знаменитых ракетных установок «Катюша», что стало решением задачи исключительной важности для обороны страны.</p>
+                </div>
+                
+                <p>С 1951 г. Борис Петрович начал работать над теорией горения порохов. В 1958 г. его команда получила заказ от Сергея Королёва на разработку крупногабаритных зарядов для стратегического комплекса РТ-1.</p>
+                
+                <p>Б. П. Жуков внёс огромный вклад в развитие химической промышленности и оборонной мощи страны, занимая руководящие посты в научно-исследовательских институтах.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Фотогалерея с экскурсии</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="5431813258165222626.jpg" alt="Архивные документы" class="gallery-img">
+                    <div class="gallery-caption">Архивные документы и фотографии</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="5431813258165222622.jpg" alt="Научные материалы" class="gallery-img">
+                    <div class="gallery-caption">Научные материалы и исследования</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="5431813258165222615.jpg" alt="Достижения" class="gallery-img">
+                    <div class="gallery-caption">Экспонаты выставки</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="center-info">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Информация о центре</h2>
+            <div class="center-details">
+                <div class="detail-item">
+                    <div class="detail-icon">📍</div>
+                    <h3>Адрес</h3>
+                    <p>г. Москва, ул. Культурная, д. 15</p>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon">📞</div>
+                    <h3>Телефон</h3>
+                    <p>+7 (495) 123-45-67</p>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon">⏰</div>
+                    <h3>Время работы</h3>
+                    <p>Пн-Пт: 10:00-20:00<br>Сб-Вс: 11:00-18:00</p>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon">🎫</div>
+                    <h3>Длительность экскурсии</h3>
+                    <p>1 час</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>© 2025 Культурно-эстетический центр. Экскурсия "Борис Петрович Жуков"</p>
+            
+        </div>
+    </footer>
+</body>
+</html>
